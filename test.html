@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<title>EZ Admin</title>
@@ -9,7 +10,7 @@
 	</head>
 	<body>
 	<div id="header"><img src="./img/ezlogo.png" alt="EZ ADMIN" /><input type="search" placeholder="SEARCH" autofocus="true" /></div>
-	<div id="abc"><a id="aa" href="#a" onClick="link = '#a';clickLinks();">A</a>|<a id="bb" href="#b" onClick="link = '#b';clickLinks();">B</a>|<a id="cc" href="#c" onClick="link = '#c';clickLinks();">C</a>|<a id="dd" href="#d" onClick="link = '#d';clickLinks();">D</a>|<a id="ee" href="#e" onClick="link = '#e';clickLinks();">E</a>|<a id="ff" href="#f" onClick="link = '#f';clickLinks();">F</a>|<a id="gg" href="#g" onClick="link = '#g';clickLinks();">G</a>|<a id="hh" href="#h" onClick="link = '#h';clickLinks();">H</a>|<a id="ii" href="#i" onClick="link = '#i';clickLinks();">I</a>|<a id="jj" href="#j" onClick="link = '#j';clickLinks();">J</a>|<a id="kk" href="#k" onClick="link = '#k';clickLinks();">K</a>|<a id="ll" href="#l" onClick="link = '#l';clickLinks();">L</a>|<a id="mm" href="#m" onClick="link = '#m';clickLinks();">M</a>|<a id="nn" href="#n" onClick="link = '#n';clickLinks();">N</a>|<a id="oo" href="#o" onClick="link = '#o';clickLinks();">O</a>|<a id="pp" href="#p" onClick="link = '#p';clickLinks();">P</a>|<a id="qq" href="#q" onClick="link = '#q';clickLinks();">Q</a>|<a id="rr" href="#r" onClick="link = '#r';clickLinks();">R</a>|<a id="ss" href="#s" onClick="link = '#s';clickLinks();">S</a>|<a id="tt" href="#t" onClick="link = '#t';clickLinks();">T</a>|<a id="uu" href="#u" onClick="link = '#u';clickLinks();">U</a>|<a id="vv" href="#v" onClick="link = '#v';clickLinks();">V</a>|<a id="ww" href="#w" onClick="link = '#w';clickLinks();">W</a>|<a id="xx" href="#x" onClick="link = '#x';clickLinks();">X</a>|<a id="yy" href="#y" onClick="link = '#y';clickLinks();">Y</a>|<a id="zz" href="#z" onClick="link = '#z';clickLinks();">Z</a></div><div id="spacer"></div>
+	<div id="abc"><a id="aa" href="#a">A</a>|<a id="bb" href="#b">B</a>|<a id="cc" href="#c">C</a>|<a id="dd" href="#d">D</a>|<a id="ee" href="#e">E</a>|<a id="ff" href="#f">F</a>|<a id="gg" href="#g" >G</a>|<a id="hh" href="#h">H</a>|<a id="ii" href="#i">I</a>|<a id="jj" href="#j">J</a>|<a id="kk" href="#k">K</a>|<a id="ll" href="#l">L</a>|<a id="mm" href="#m">M</a>|<a id="nn" href="#n">N</a>|<a id="oo" href="#o">O</a>|<a id="pp" href="#p">P</a>|<a id="qq" href="#q">Q</a>|<a id="rr" href="#r">R</a>|<a id="ss" href="#s">S</a>|<a id="tt" href="#t">T</a>|<a id="uu" href="#u">U</a>|<a id="vv" href="#v">V</a>|<a id="ww" href="#w">W</a>|<a id="xx" href="#x">X</a>|<a id="yy" href="#y">Y</a>|<a id="zz" href="#z">Z</a></div><div id="spacer"></div>
 	<div id="content">
 		<div class="information"><span onClick="this.parentNode.style.display = 'none'">X</span>
 			<img src="./img/ezlogo.png" alt="EZ ADMIN" />
@@ -89,227 +90,36 @@
                 </div>
 	</div>
 	<script>
-		clickLinks();
-		window.addEventListener('scroll', function() {
-			checkDistance();
-		});
-		function checkDistance(link)
+	$(function() 
+	{
+		$('a').click(function(e)
 		{
-			var link = location.hash;
-			for (i = 0; i < 26; i++) 
+	        	var top = $( $(this).attr('href') ).offset().top - 160;
+			//$('a').style.fontWeight = "normal";
+			//$('a').style.color = "#EEE";
+			//colorLinks(normal);
+			console.log($(this));
+			//$(this).style.fontWeight = "bold";
+			//$(this).style.color = "#FFF";
+		        $('html, body').animate(
 			{
-				switch(i){
-					case 0:
-						link = "#a";
-					break;
-                                        case 1:
-                                                link = "#b";
-                                        break;
-                                        case 2:
-                                                link = "#c";
-                                        break;
-                                        case 3:
-                                                link = "#d";
-                                        break;
-                                        case 4:
-                                                link = "#e";
-                                        break;
-                                        case 5:
-                                                link = "#f";
-                                        break;
-                                        case 6:
-                                                link = "#g";
-                                        break;
-                                        case 7:
-                                                link = "#h";
-                                        break;
-                                        case 8:
-                                                link = "#i";
-                                        break;
-                                        case 9:
-                                                link = "#j";
-                                        break;
-                                        case 10:
-                                                link = "#k";
-                                        break;
-                                        case 11:
-                                                link = "#l";
-                                        break;
-                                        case 12:
-                                                link = "#m";
-                                        break;
-                                        case 13:
-                                                link = "#n";
-                                        break;
-                                        case 14:
-                                                link = "#o";
-                                        break;
-                                        case 15:
-                                                link = "#p";
-                                        break;
-                                        case 16:
-                                                link = "#q";
-                                        break;
-                                        case 17:
-                                                link = "#r";
-                                        break;
-                                        case 18:
-                                                link = "#s";
-                                        break;
-                                        case 19:
-                                                link = "#t";
-                                        break;
-                                        case 20:
-                                                link = "#u";
-                                        break;
-                                        case 21:
-                                                link = "#v";
-                                        break;
-                                        case 22:
-                                                link = "#w";
-                                        break;
-                                        case 23:
-                                                link = "#x";
-                                        break;
-                                        case 24:
-                                                link = "#y";
-                                        break;
-                                        case 25:
-                                                link = "#z";
-                                        break;
-				}
-				var viewableOffset = $(link).offset().top - $(window).scrollTop();
-				if (viewableOffset > 50 && viewableOffset < 150)
-				{
-					location.hash = link;
-					clickLinks(link);
-				}
-			} 
-		}
-		function clickLinks(link)
-		{
-			var link = location.hash;
-			colorLinks("normal");
-                        switch(link){
-                                case "#a":
-                                        document.getElementById("aa").style.fontWeight = "bold";
-                                        document.getElementById("aa").style.color = "#FFF";
-                                break;
-                                case "#b":
-                                        document.getElementById("bb").style.fontWeight = "bold";
-                                        document.getElementById("bb").style.color = "#FFF";
-                                break;
-                                case "#c":
-                                        document.getElementById("cc").style.fontWeight = "bold";
-                                        document.getElementById("cc").style.color = "#FFF";
-                                break;
-                                case "#d":
-                                        document.getElementById("dd").style.fontWeight = "bold";
-                                        document.getElementById("dd").style.color = "#FFF";
-                                break;
-                                case "#e":
-                                        document.getElementById("ee").style.fontWeight = "bold";
-                                        document.getElementById("ee").style.color = "#FFF";
-                                break;
-                                case "#f":
-                                        document.getElementById("ff").style.fontWeight = "bold";
-                                        document.getElementById("ff").style.color = "#FFF";
-                                break;
-                                case "#g":
-                                        document.getElementById("gg").style.fontWeight = "bold";
-                                        document.getElementById("gg").style.color = "#FFF";
-                                break;
-                                case "#h":
-                                        document.getElementById("hh").style.fontWeight = "bold";
-                                        document.getElementById("hh").style.color = "#FFF";
-                                break;
-                                case "#i":
-                                        document.getElementById("ii").style.fontWeight = "bold";
-                                        document.getElementById("ii").style.color = "#FFF";
-                                break;
-                                case "#j":
-                                        document.getElementById("jj").style.fontWeight = "bold";
-                                        document.getElementById("jj").style.color = "#FFF";
-                                break;
-                                case "#k":
-                                        document.getElementById("kk").style.fontWeight = "bold";
-                                        document.getElementById("kk").style.color = "#FFF";
-                                break;
-                                case "#l":
-                                        document.getElementById("ll").style.fontWeight = "bold";
-                                        document.getElementById("ll").style.color = "#FFF";
-                                break;
-                                case "#m":
-                                        document.getElementById("mm").style.fontWeight = "bold";
-                                        document.getElementById("mm").style.color = "#FFF";
-                                break;
-                                case "#n":
-                                        document.getElementById("nn").style.fontWeight = "bold";
-                                        document.getElementById("nn").style.color = "#FFF";
-                                break;
-                                case "#o":
-                                        document.getElementById("oo").style.fontWeight = "bold";
-                                        document.getElementById("oo").style.color = "#FFF";
-                                break;
-                                case "#p":
-                                        document.getElementById("pp").style.fontWeight = "bold";
-                                        document.getElementById("pp").style.color = "#FFF";
-                                break;
-                                case "#q":
-                                        document.getElementById("qq").style.fontWeight = "bold";
-                                        document.getElementById("qq").style.color = "#FFF";
-                                break;
-                                case "#r":
-                                        document.getElementById("rr").style.fontWeight = "bold";
-                                        document.getElementById("rr").style.color = "#FFF";
-                                break;
-                                case "#s":
-                                        document.getElementById("ss").style.fontWeight = "bold";
-                                        document.getElementById("ss").style.color = "#FFF";
-                                break;
-                                case "#t":
-                                        document.getElementById("tt").style.fontWeight = "bold";
-                                        document.getElementById("tt").style.color = "#FFF";
-                                break;
-                                case "#u":
-                                        document.getElementById("uu").style.fontWeight = "bold";
-                                        document.getElementById("uu").style.color = "#FFF";
-                                break;
-                                case "#v":
-                                        document.getElementById("vv").style.fontWeight = "bold";
-                                        document.getElementById("vv").style.color = "#FFF";
-                                break;
-                                case "#w":
-                                        document.getElementById("ww").style.fontWeight = "bold";
-                                        document.getElementById("ww").style.color = "#FFF";
-                                break;
-                                case "#x":
-                                        document.getElementById("xx").style.fontWeight = "bold";
-                                        document.getElementById("xx").style.color = "#FFF";
-                                break;
-                                case "#y":
-                                        document.getElementById("yy").style.fontWeight = "bold";
-                                        document.getElementById("yy").style.color = "#FFF";
-                                break;
-                                case "#z":
-                                        document.getElementById("zz").style.fontWeight = "bold";
-                                        document.getElementById("zz").style.color = "#FFF";
-                                break;
-                        }
-
-		}
-		function colorLinks(hex)
-		{
-		    var links = document.getElementsByTagName("a");
-		    for(var i=0;i<links.length;i++)
-		    {
-		        if(links[i].href)
-		        {
-		            links[i].style.fontWeight = hex; 
-			    links[i].style.color = "#EEE"; 
-		        }
-	 	   }  
-		}		
+			        scrollTop: top
+			}, 500);
+		        return false;
+		});
+	});
+	function colorLinks(hex)
+	{
+	    var links = document.getElementsByTagName("a");
+	    for(var i=0;i<links.length;i++)
+	    {
+	        if(links[i].href)
+	        {
+	            links[i].style.fontWeight = hex; 
+		    links[i].style.color = "#EEE"; 
+	        }
+	    }  
+	}	
 	</script>
 	</body>
 </html>
