@@ -95,7 +95,7 @@
 		});
 		function checkDistance(link)
 		{
-			var linky = location.hash;
+			var link = location.hash;
 			for (i = 0; i < 26; i++) 
 			{
 				switch(i){
@@ -151,44 +151,44 @@
                                                 link = "#q";
                                         break;
                                         case 17:
-                                                linky = "#r";
+                                                link = "#r";
                                         break;
                                         case 18:
-                                                linky = "#s";
+                                                link = "#s";
                                         break;
                                         case 19:
-                                                linky = "#t";
+                                                link = "#t";
                                         break;
                                         case 20:
-                                                linky = "#u";
+                                                link = "#u";
                                         break;
                                         case 21:
-                                                linky = "#v";
+                                                link = "#v";
                                         break;
                                         case 22:
-                                                linky = "#w";
+                                                link = "#w";
                                         break;
                                         case 23:
-                                                linky = "#x";
+                                                link = "#x";
                                         break;
                                         case 24:
-                                                linky = "#y";
+                                                link = "#y";
                                         break;
                                         case 25:
-                                                linky = "#z";
+                                                link = "#z";
                                         break;
 				}
 				var viewableOffset = $(link).offset().top - $(window).scrollTop();
 				if (viewableOffset > 50 && viewableOffset < 150)
 				{
-					location.hash = linky;
+					location.hash = link;
 					clickLinks(link);
 				}
 			} 
 		}
 		function clickLinks(link)
 		{
-			var link = linky;
+			var link = location.hash;
 			colorLinks("normal");
                         switch(link){
                                 case "#a":
