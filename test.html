@@ -96,7 +96,6 @@
 		{
 	        	var top = $( $(this).attr('href') ).offset().top - 160;
 			colorLinks("normal");
-			console.log($(this));
 			$(this).css("font-weight","bold");
 			$(this).css("color","#FFF");
 		        $('html, body').animate(
@@ -117,7 +116,25 @@
 		    links[i].style.color = "#EEE"; 
 	        }
 	    }  
-	}	
+	}
+	$(window).scroll(function() 
+	{
+		for (var i = 65; i <= 90; i++)
+		{
+			var abc = "#"+String.fromCharCode(i).toLowerCase();
+			var abclink = "#"+String.fromCharCode(i).toLowerCase()+String.fromCharCode(i).toLowerCase();
+			var scrollTop     = $(window).scrollTop(),
+	                elementOffset = $(abc).offset().top,
+        	        distance      = (elementOffset - scrollTop);
+			console.log(distance);
+			if(distance > 100 && distance < 150)
+			{
+				colorLinks("normal");
+				$(abclink).css("font-weight","bold");
+				$(abclink).css("color","#FFF");
+			}
+		}
+	});
 	</script>
 	</body>
 </html>
