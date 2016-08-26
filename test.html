@@ -95,12 +95,10 @@
 		$('a').click(function(e)
 		{
 	        	var top = $( $(this).attr('href') ).offset().top - 160;
-			//$('a').style.fontWeight = "normal";
-			//$('a').style.color = "#EEE";
-			//colorLinks(normal);
+			colorLinks("normal");
 			console.log($(this));
-			//$(this).style.fontWeight = "bold";
-			//$(this).style.color = "#FFF";
+			$(this).css("font-weight","bold");
+			$(this).css("color","#FFF");
 		        $('html, body').animate(
 			{
 			        scrollTop: top
