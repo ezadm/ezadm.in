@@ -31,7 +31,7 @@
 		<div class="alphabet" id="b"><h3>B</h3>
 		</div>
                 <div class="alphabet" id="c"><h3>C</h3>
-                        <div class="tool" id="comb.sh"><h2>comb.sh</h2><p class="curl">curl http://example.com/comb.sh</p><p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p><span class="mysql">#mysqld</span></div>
+                        <div class="tool" id="comb.sh"><h2>comb.sh</h2><p class="curl">curl http://example.com/comb.sh</p><p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p><span class="mysql">#mysql</span></div>
                 </div>
                 <div class="alphabet" id="d"><h3>D</h3>
                 </div>
@@ -107,27 +107,32 @@
 		$('li').click(function(e)
                 {
 			$(this).toggleClass("active");
-			var filter = $(this).text().toLowerCase();
-			
-			//TODO add an if/switch case statement that checks the currently selected item and sets the appropriate variable for the multi-selector
-
-			//var apache = 'span:contains("#apache")';
-                        var apache = 'span:not(:contains("#apache"))';
-			// TEMP nginx on/off variables
-			var nginx = 'span:contains("#nginx")';
-                        //var nginx = 'span:not(:contains("#nginx"))';
-			// TEMP mysql on/off variables
-                        var mysql = 'span:contains("#mysql")';
-			//var mysql = 'span:not(:contains("#mysql"))';
-			// TEMP security on/off variable
-			//var security = 'span:contains("#mysql")';
-			var security = 'span:not(:contains("#security"))';
+			//Check to see if a toggle is currently active, if it is then 
+			var filters = document.getElementsByTagName("li");
+			for(var i=0;i<filters.length;i++)
+			{
+				var filter = $(filters[i]).text().toLowerCase();
+				if($(filters[i]).hasClass("active"))
+				{
+					switch(filter)
+					{
+						case "apache": var apache = 'span:not(:contains("#apache"))'; //ON
+						break;
+						case "nginx": var nginx = 'span:not(:contains("#nginx"))'; //ON
+						break;
+						case "mysql": var mysql = 'span:not(:contains("#mysql"))'; //ON
+						break;
+						case "security": var security = 'span:not(:contains("#security"))'; //ON
+						break;
+					}
+				}
+			}
 			var tools = document.getElementsByClassName("tool");
-			$(this).toggleClass("active");
 			for (var i=0;i<tools.length;i++)
 			{
-				// WIP Multi-selector
-				$(tools[i]).children(apache+', '+security+', '+nginx+', '+mysql).parent().toggle("slow", function (){});	
+				// WIP Multi-selector (as its a toggle is only correct every other time...)
+				$(tools[i]).show();
+				$(tools[i]).children(apache+','+security+','+nginx+','+mysql).parent().toggle("slow", function (){});
 			}
                 });
 	});
