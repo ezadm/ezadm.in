@@ -107,7 +107,6 @@
 		$('li').click(function(e)
                 {
 			$(this).toggleClass("active");
-			//Check to see if a toggle is currently active, if it is then 
 			var filters = document.getElementsByTagName("li");
 			for(var i=0;i<filters.length;i++)
 			{
@@ -130,9 +129,8 @@
 			var tools = document.getElementsByClassName("tool");
 			for (var i=0;i<tools.length;i++)
 			{
-				// WIP Multi-selector (as its a toggle is only correct every other time...)
 				$(tools[i]).show();
-				$(tools[i]).children(apache+','+security+','+nginx+','+mysql).parent().toggle("slow", function (){});
+				$(tools[i]).children(apache+','+security+','+nginx+','+mysql).parent().toggle("fast", function (){});
 			}
                 });
 	});
