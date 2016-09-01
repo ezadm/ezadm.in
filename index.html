@@ -176,13 +176,15 @@
 			if($(this).text() === "[-]")
 			{
 				$(this).text("[+]");
+				$(this).parent().children('.tool').hide("fast");
+
 			}
 			else
 			{
 				$(this).text("[-]");
+                                $(this).parent().children('.tool').show("fast");
 			}
-                        $(this).parent().children('.tool').toggle("fast");
-			filtertool();
+                        filtertool();
 		});
 		$('a').click(function(e)
 		{
@@ -230,7 +232,6 @@
                 var tools = document.getElementsByClassName("tool");
                 for (var i=0;i<tools.length;i++)
                 {
-                	console.log($(tools[i]).parent().children('.minmax').text());
                         if($(tools[i]).parent().children('.minmax').text() === "[-]")
                         {
                         	$(tools[i]).show();
