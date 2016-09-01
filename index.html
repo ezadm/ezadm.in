@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/ez.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto:300" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="./js/clipboard.min.js"></script>
 	</head>
 	<body>
 	<div id="header"><img src="./img/ezlogo.png" alt="EZ ADMIN" /><input type="search" placeholder="SEARCH" autofocus="true" /></div>
@@ -24,29 +25,29 @@
 		<div class="alphabet" id="a"><h3>A</h3>
 			<div class="tool" id="apache.sh">
 				<h2>apache.sh</h2>
-				<input type="text" id="curl.apache.sh" value="curl http://ezadm.in/scripts/apache.sh" disabled />
-				<button data-copytarget="#curl.apache.sh">.</button>
+				<input type="text" id="curlapachesh" value="curl http://ezadm.in/scripts/apache.sh" readonly />
+				<button data-clipboard-target="#curlapachesh">.</button>
 				<p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
 				<span class="apache">#apache</span>
 			</div>
                         <div class="tool" id="abc.sh">
                                 <h2>abc.sh</h2>
-                                <input type="text" id="curl.abc.sh" value="curl http://ezadm.in/scripts/abc.sh" disabled />
-                                <button data-copytarget="#curl.abc.sh">.</button>
+                                <input type="text" id="curlabcsh" value="curl http://ezadm.in/scripts/abc.sh" readonly />
+                                <button data-clipboard-target="#curlabcsh">.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="apache">#apache</span>
                         </div>
                         <div class="tool" id="alpha.sh">
                                 <h2>alpha.sh</h2>
-                                <input type="text" id="curl.alpha.sh" value="curl http://ezadm.in/scripts/alpha.sh" disabled />
-                                <button data-copytarget="#curl.alpha.sh">.</button>
+                                <input type="text" id="curlalphash" value="curl http://ezadm.in/scripts/alpha.sh" readonly />
+                                <button data-clipboard-target="#curlalphash">.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="apache security">#apache security</span>
                         </div>
                         <div class="tool" id="admin.sh">
                                 <h2>admin.sh</h2>
-                                <input type="text" id="curl.admin.sh" value="curl http://ezadm.in/scripts/admin.sh" disabled />
-                                <button data-copytarget="#curl.apache.sh">.</button>
+                                <input type="text" id="curladminsh" value="curl http://ezadm.in/scripts/admin.sh" readonly />
+                                <button data-clipboard-target="#curladminsh">.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="security">#security</span>
                         </div>
@@ -54,15 +55,15 @@
 		<div class="alphabet" id="b"><h3>B</h3>
                         <div class="tool" id="bash.sh">
                                 <h2>bash.sh</h2>
-                                <input type="text" id="curl.bash.sh" value="curl http://ezadm.in/scripts/bash.sh" disabled />
-                                <button data-copytarget="#curl.bash.sh">.</button>
+                                <input type="text" id="curlbashsh" value="curl http://ezadm.in/scripts/bash.sh" readonly />
+                                <button data-clipboard-target="#curlbashsh">.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="security">#security</span>
                         </div>
                         <div class="tool" id="bravo.sh">
                                 <h2>bravo.sh</h2>
-                                <input type="text" id="curl.bravo.sh" value="curl http://ezadm.in/scripts/bravo.sh" disabled />
-                                <button data-copytarget="#curl.bravo.sh">.</button>
+                                <input type="text" id="curlbravosh" value="curl http://ezadm.in/scripts/bravo.sh" readonly />
+                                <button data-clipboard-target="#curlbravosh">.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="nginx">#nginx</span>
                         </div>
@@ -74,36 +75,36 @@
                 <div class="alphabet" id="e"><h3>E</h3>
                         <div class="tool" id="easy.sh">
                                 <h2>easy.sh</h2>
-                                <input type="text" id="curl.easy.sh" value="curl http://ezadm.in/scripts/easy.sh" disabled />
-                                <button data-copytarget="#curl.easy.sh" >.</button>
+                                <input type="text" id="curleasysh" value="curl http://ezadm.in/scripts/easy.sh" readonly />
+                                <button data-clipboard-target="#curleasysh" >.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="apache nginx mysql security">#apache #nginx #mysql #security</span>
                         </div>
                         <div class="tool" id="echo.sh">
                                 <h2>echo.sh</h2>
-                                <input type="text" id="curl.echo.sh" value="curl http://ezadm.in/scripts/echo.sh" disabled />
-                                <button data-copytarget="#curl.echo.sh" >.</button>
+                                <input type="text" id="curlechosh" value="curl http://ezadm.in/scripts/echo.sh" readonly />
+                                <button data-clipboard-target="#curlechosh" >.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="apache nginx mysql">#apache #nginx #mysql</span>
                         </div>
                         <div class="tool" id="even.sh">
                                 <h2>even.sh</h2>
-                                <input type="text" id="curl.even.sh" value="curl http://ezadm.in/scripts/even.sh" disabled />
-                                <button data-copytarget="#curl.even.sh" >.</button>
+                                <input type="text" id="curlevensh" value="curl http://ezadm.in/scripts/even.sh" readonly />
+                                <button data-clipboard-target="#curlevensh" >.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="security">#security</span>
                         </div>
                         <div class="tool" id="essay.sh">
                                 <h2>essay.sh</h2>
-                                <input type="text" id="curl.essay.sh" value="curl http://ezadm.in/scripts/essay.sh" disabled />
-                                <button data-copytarget="#curl.essay.sh" >.</button>
+                                <input type="text" id="curlessaysh" value="curl http://ezadm.in/scripts/essay.sh" readonly />
+                                <button data-clipboard-target="#curlessaysh" >.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="apache mysql">#apache #mysql</span>
                         </div>
                         <div class="tool" id="example.sh">
                                 <h2>example.sh</h2>
-                                <input type="text" id="curl.example.sh" value="curl http://ezadm.in/scripts/example.sh" disabled />
-                                <button data-copytarget="#curl.example.sh" >.</button>
+                                <input type="text" id="curlexamplesh" value="curl http://ezadm.in/scripts/example.sh" readonly />
+                                <button data-clipboard-target="#curlexamplesh" >.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="apache nginx">#apache #nginx</span>
                         </div>
@@ -125,8 +126,8 @@
                 <div class="alphabet" id="m"><h3>M</h3>
                         <div class="tool" id="mysql.sh">
                                 <h2>mysql.sh</h2>
-                                <input type="text" id="curl.mysql.sh" value="curl http://ezadm.in/scripts/mysql.sh" disabled />
-                                <button data-copytarget="#curl.mysql.sh" >.</button>
+                                <input type="text" id="curlmysqlsh" value="curl http://ezadm.in/scripts/mysql.sh" readonly />
+                                <button data-clipboard-target="#curlmysqlsh" >.</button>
                                 <p>Lorem ipsum dolor sit amet, eros condimentum, orci curabitur hendrerit eleifend ut fusce mauris. Integer fusce.</p>
                                 <span class="mysql security">#mysql #security</span>
                         </div>
@@ -170,36 +171,7 @@
 				$(abc[i]).toggle();
 			}
 		}
-		//copy scripting
-		'use strict';
-                // click events
- 	        // event handler
-                $('button').click(function(e)
-                {
-                	// find target element
-                        var
-                        t = e.target,
-                        c = t.dataset.copytarget,
-                        inp = (c ? document.querySelector(c) : null);
-			console.log(c);
-			console.log(inp);
-			// is element selectable?
-                        if (inp && inp.select)
-                        {
-                        	// select text
-                                inp.select();
-                                try
-                                {
-                                	// copy text
-                                        document.execCommand('copy');
-                                        inp.blur();
-                                }
-                                catch (err)
-                                {
-                                	alert('please press Ctrl/Cmd+C to copy');
-                                }
-                        }
-                });
+		new Clipboard('button');
 		$('a').click(function(e)
 		{
 	        	var top = $( $(this).attr('href') ).offset().top - 160;
